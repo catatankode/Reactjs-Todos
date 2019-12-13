@@ -1,16 +1,15 @@
 import React from 'react';
 import TodoAdd from './components/TodoAdd';
-import { Typography } from '@material-ui/core';
+import { Typography, Container } from '@material-ui/core';
 import TodoList from './components/TodoList';
 import useTodoState from './customeHooks/useTodoState';
-import './App.css';
 
 const App = () => {
   // const [todos, setTodos] = useState([]);
   const {todos, addTodo, deleteTodo} = useTodoState([]);
 
   return(
-    <div className="App">
+    <Container maxWidth="sm">
       <Typography component="h1" variant="h2">
         Todos
       </Typography>
@@ -32,7 +31,7 @@ const App = () => {
         //   setTodos(newTodos);
         // }}
       />
-    </div>
+    </Container>
   );
 }
 

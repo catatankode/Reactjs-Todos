@@ -9,6 +9,7 @@ const TodoAdd = ({saveTodo}) => {
             onSubmit={(event) => {
                 event.preventDefault();
                 saveTodo(text);
+                setText("")
             }}
         >
             <TextField
